@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function send_go(f) {
+		f.submit();		
+	}	
+</script>
+</head>
+<body>
+	<!-- 여러 요구사항이 하나의 서블릿으로 이동할 때는 공통의 파라미터 값을 주어서
+		 파라미터 값에 의해서 서블릿이 구문할 수 있도록 만든다. -->
+	<form action="/01_servlet/Ex16" method="post">
+		<input type="button" value="오늘 날짜와 운세 구하기" onclick="send_go(this.form)"> 
+		<input type="hidden" name="cmd" value="1">
+	</form>
+</body>
+</html>
